@@ -134,13 +134,14 @@ function App() {
 
   return (
     <div className="App">
-      <p>Current Status: {powerStatus?.status.toLowerCase() === "on" ? "Power is Present" : "Load Shedding"}</p>
+      <div style={{ paddingTop: "20px" }}>{powerStatus?.status.toLowerCase() === "on" ? "🔌" : "🕯"}</div>
+      <p>Current Status: {powerStatus?.status.toLowerCase() === "on" ? "⚡ Power is Present" : "🌚 Load Shedding"}</p>
       <p>Time since power was {powerStatus?.status.toLowerCase() === "on" ? "restored" : "cut"}: {relativeTime}</p>
       {powerStatus?.status.toLowerCase() === "on" && (
         <p>last loadshedding: {lastLoadShedding}</p>
       )}
       <p>number of times power was cut today: {totalPowerOffCount}</p>
-      <p>total duration: {totalPowerOffTime}</p>
+      <p>total duration: 📈{totalPowerOffTime}</p>
       <br></br>
       <p>-----</p>
       <footer>note: this is purely experimental, actual data may or may not be right</footer>
