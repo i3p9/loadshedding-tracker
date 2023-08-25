@@ -1,0 +1,6 @@
+python-dotenv
+uvicorn
+fastapi
+flask
+Flask-PyMongo
+pytz
